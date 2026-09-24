@@ -204,6 +204,8 @@ def ejecutar_pruebas():
         ("Portal Norte", "Portal Sur",  True,  "Ruta larga en hora pico"),
         ("Calle 85",     "Calle 85",    False, "Mismo origen y destino"),
         ("Portal 80",    "NQS Calle 30",False, "Ruta por ramal occidental"),
+        ("Marly",        "Ricaurte",    True,  "Ruta corta centro con hora pico"),
+        ("Granja",       "Portal Sur",  False, "Ruta ramal occidental y troncal sur"),
     ]
 
     for inicio, fin, pico, descripcion in casos:
@@ -219,6 +221,8 @@ def ejecutar_pruebas():
             if ruta:
                 print(f"   ✅ Ruta: {' → '.join(ruta)}")
                 print(f"   ⏱️  Tiempo: {costo:.1f} min | Paradas: {len(ruta)}")
+                if costo > 60:
+                    print("   💡 REGLA R3 activada: La ruta supera 60 min. Se sugiere ruta alterna.")
             else:
                 print("   ❌ No se encontró ruta.")
 
