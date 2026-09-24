@@ -80,9 +80,3 @@ Portal 80, Avenida Rojas, Álamos, Granja, Carrera 90
 | R2 | Origen == Destino | Retornar ruta vacía |
 | R3 | Costo > 60 min | Sugerir ruta alternativa |
 | R4 | Estación no existe | Retornar error |
-
-## 👥 Integrantes
-- Integrante 1
-- Integrante 2
-- Integrante 3
-- Integrante 4
